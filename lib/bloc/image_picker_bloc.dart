@@ -1,5 +1,4 @@
 import 'package:bloc/bloc.dart';
-import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:image_picker_with_bloc/bloc/image_picker_event.dart';
 import 'package:image_picker_with_bloc/bloc/image_picker_state.dart';
@@ -9,7 +8,7 @@ class ImagePickerBloc extends Bloc<ImagePickerEvent, ImagePickerState> {
   final ImagePickerUtils imagePickerUtils;
   ImagePickerBloc(this.imagePickerUtils) : super(const ImagePickerState()) {
     on<CameraCaptureEvent>(cameraCapture);
-    on<CameraCaptureEvent>(galleryCapture);
+    // on<CameraCaptureEvent>(galleryCapture);
   }
   void cameraCapture(
       CameraCaptureEvent event, Emitter<ImagePickerState> states) async {
